@@ -51,3 +51,7 @@ fetchReviews();
 
 document.querySelector('#arrow--right').addEventListener('click', moveSlider);
 document.querySelector('#arrow--left').addEventListener('click', moveSlider);
+
+
+// Mema
+

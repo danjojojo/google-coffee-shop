@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/google-sans?styles=20575,20581,20578,20576,20577,20573,20584,20582,20583,20574,20580,20579');
 
 *, *::before, *::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto';
+    font-family: 'Product Sans';
 }
 
 
@@ -14,6 +15,20 @@
     min-height: 100vh;
 }
 
+
+/* ========================= NAV DIV ========================= */
+.nav{
+    background-color: #F4F7FC;
+    padding: 3em;
+    height: 100vh;
+}
+.menu{
+    margin-top: 2em;
+    text-align: center;
+    font-weight: 500;
+}
+
+
 /* ========================= STICKY NAV AND HEADER ========================= */
 .nav, .row.header{
     position: sticky;
@@ -21,21 +36,26 @@
     z-index: 100;
 }
 
-/* ========================= NAV DIV ========================= */
-.nav{
-    background-color: aqua;
-    padding: 3em;
-    height: 100vh;
-}
-.menu{
-    border: 1px solid black;
-    margin-top: 1.4em;
-    text-align: center;
-}
-
 /* ========================= HEADER DIV ========================= */
 .row.header{
+    display: flex;
     background-color: white;
+    color: #6a6a6a;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#desktop .material-symbols-outlined{
+    margin-left: 1em;
+    font-size: 2.5rem;
+}
+
+.row.header span, .about-us span{
+    font-weight: 200;
+}
+
+#mobile{
+    display: none;
 }
 
 
@@ -45,7 +65,6 @@
 }
 
 .row{
-    border: 4px solid brown;
     padding: 3em 0 3em 0;
     margin-left: 10%;
     margin-right: 10%;
@@ -58,13 +77,57 @@
 }
 
 .row.footer{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    padding-top: 1em;
+    border: 1px solid black;
+}
+
+.about-us{
+    margin: 2em;
+    padding: 1em;
+    width: 60%;
+    font-size: 1.1em;
+    border: 1px solid black;
+}
+
+.about-us h3{
+    margin-bottom: 1em;
+}
+
+
+.contacts{
+    margin: 2em;
+    width: 40%;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+.contacts li{
+    display: flex;
+    list-style: none;
+    padding: 1em;
+    border: 1px solid black;
+    
+}
+
+.contacts li p{
+    margin-left: 1em;
+}
+
+
+.sub-header{
     text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
 }
 
 
 /* ========================= MOTTO DIV ========================= */
 .motto{
-    border: 4px solid darkmagenta;
+    border: 4px solid rgb(162, 162, 162);
+    background-color: rgb(162, 162, 162);
     border-radius: 25px;
     padding-top: 15%;
     margin-bottom: 3rem;
@@ -75,14 +138,16 @@
     margin: 1em;
     font-size: 2.5rem;
     text-align: left;
+    font-weight: 300;
+    color: white;
 }
 
 
 /* ========================= BEST-SELLERS DIV ========================= */
 .best-sellers{
     display: flex;
-    border: 4px solid darkmagenta;
-    padding: 5rem;
+    margin-top: 1.5rem;
+    padding: 0 5rem;
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 3rem;
@@ -99,31 +164,29 @@
 .review-body{
     display: flex;
     justify-content: center;
-    border: 4px solid darkmagenta;
 }
 
 .review-container{
-    background-color: lightblue;
     position: relative;
     text-align: center;
-    border: 1px solid red;
 }
 
 .review-content{
     position: relative;
-    max-width: 400px;
+    max-width: 500px;
     /* width: calc(100vw - 4rem); */
     padding: 2rem 0;
     margin: 1.5rem;
     overflow: hidden;
+    font-size: 1.3rem;
     /* border: 1px solid red; */
 }
 
 .arrow{
     position: absolute;
-    top: 40%;
+    top: 45%;
     background: white;
-    border: none;
+    border: 1px solid #6a6a6a;
     border-radius: 50%;
     cursor: pointer;
     color: grey;
@@ -149,7 +212,7 @@
 
 .review{
     flex: 1 0 100%;
-    border: 1px solid black;
+    border: 1px solid rgb(129, 129, 129);
     border-radius: 10px;
     padding: .5em;
     display: grid;
@@ -160,7 +223,7 @@
 
 .review__profile{
     border: 1px solid black;
-    padding: 1rem 1.3rem 1rem 1.3rem;
+    padding: 0.8rem 1.3rem 0.8rem 1.3rem;
     border-radius: 50%;
     font-weight: 600;
 }
@@ -171,7 +234,6 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media (max-width: 1440px) {
     .row{
-        border: 4px solid brown;
         padding: 3em 0 3em 0;
         margin-left: 5%;
         margin-right: 5%;
@@ -181,7 +243,6 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media (max-width: 1024px) {
     .row{
-        border: 4px solid brown;
         padding: 3em 0 3em 0;
         margin-left: 2%;
         margin-right: 2%;
@@ -206,26 +267,78 @@
         padding: 2em;
     }
 
+    .row.header{
+        text-align: center;
+        padding: 2em;
+        font-size: 1.3rem;
+    }
+
     .menu{
         margin: 0em 1em;
         text-align: center;
-        border: 1px solid black;
     }
 
     .row{
-        border: 4px solid brown;
         padding: 3em 0 3em 0;
         margin-left: 1%;
         margin-right: 1%;
+    }
+
+    .review-content{
+        max-width: 400px;
+        font-size: 1rem;
+    }
+
+    .product{
+        border: 4px solid darkblue;
+        padding: 8rem;
+        margin: 2rem;
+    }
+    
+    .row.footer{
+        flex-wrap: wrap;
+    }
+
+    .about-us,.contacts{
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .row.header{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #desktop .material-symbols-outlined{
+        margin-left: 1em;
+        font-size: 2.5rem;
+    }
+
+    .product{
+        border: 4px solid darkblue;
+        padding: 10rem;
+        margin: 0.5rem;
     }
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media (max-width: 400px) {
+    #desktop{
+        display: none;
+    }
 
+    #mobile, .icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+    }
+
+    .icons{
+        gap: 5em;
+    }
 
     .row{
-        border: 4px solid brown;
         padding: 3em 0 3em 0;
         margin-left: 0;
         margin-right: 0;
@@ -239,15 +352,46 @@
     
     .motto p{
         margin: 1em;
-        font-size: 1rem;
+        font-size: 1.3rem;
         text-align: left;
     }
 
     .review-content{
-        max-width: 290px;
+        max-width: 300px;
+        font-size: 1rem;
     }
 
     .review__name, .review__body{
         font-size: 1em;
+    }
+
+    .sub-header{
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.6rem;
+    }
+
+    .product{
+        border: 4px solid darkblue;
+        padding: 8rem;
+        margin: 3rem;
+    }
+
+    .row.footer{
+        text-align: center;
+       
+    }
+    
+    .about-us{
+        margin: 0;
+        width: 100%;
+
+        justify-content: center;
+        font-size: .8em;
+    }
+
+    .contacts{
+        width: 100%;
+        font-size: .9rem;
     }
 }
