@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+
+/* ========================= CONTAINER DIV ========================= */
+.container{
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* ========================= NAV DIV ========================= */
+.nav{
+    background-color: aqua;
+    padding: 3em;
+    height: 100vh;
+}
+.menu{
+    border: 1px solid black;
+    margin-top: 1.4em;
+    text-align: center;
+}
+
+
+/* ========================= STICKY NAV AND HEADER ========================= */
+.nav, .row.header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+/* ========================= CONTENT DIV ========================= */
+.content{
+    width: 100%;
+}
+
+.row{
+    border: 4px solid brown;
+    padding: 3em 0 3em 0;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+/* ========================= ROW CLASS ========================= */
+.row.center{
+    min-height: 100vh;
+}
+
+.row.footer{
+    text-align: center;
+}
+
+
+/* ========================= MOTTO DIV ========================= */
+.motto{
+    border: 4px solid darkmagenta;
+    border-radius: 25px;
+    padding-top: 15%;
+    margin-bottom: 3rem;
+    justify-content: center;
+}
+
+.motto p{
+    margin: 1em;
+    font-size: 2.5rem;
+    text-align: left;
+}
+
+
+/* ========================= BEST-SELLERS DIV ========================= */
+.best-sellers{
+    display: flex;
+    border: 4px solid darkmagenta;
+    padding: 5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.product{
+    border: 4px solid darkblue;
+    padding: 10rem;
+    margin: 1rem;
+}
+
+
+/* ========================= REVIEW-BODY DIV ========================= */
+.review-body{
+    display: flex;
+    justify-content: center;
+    border: 4px solid darkmagenta;
+}
+
+.review-container{
+    background-color: lightblue;
+    position: relative;
+    text-align: center;
+    border: 1px solid red;
+}
+
+.review-content{
+    position: relative;
+    max-width: 400px;
+    /* width: calc(100vw - 4rem); */
+    padding: 2rem 0;
+    margin: 1.5rem;
+    overflow: hidden;
+    /* border: 1px solid red; */
+}
+
+.arrow{
+    position: absolute;
+    top: 40%;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: grey;
+    z-index: 99;
+}
+
+.arrow svg{
+    pointer-events: none;
+}
+
+#arrow--right{
+    right: .5%;
+}
+
+#arrow--left{
+    left: .5%;
+}
+
+.reviews{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.review{
+    flex: 1 0 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: .5em;
+    display: grid;
+    place-items: center;
+    gap: 1.5rem;
+   
+}
+
+.review__profile{
+    border: 1px solid black;
+    padding: 1rem 1.3rem 1rem 1.3rem;
+    border-radius: 50%;
+    font-weight: 600;
+}
+
+
+
+/* ========================= WINDOW SIZE ========================= */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (max-width: 1440px) {
+    .row{
+        border: 4px solid brown;
+        padding: 3em 0 3em 0;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (max-width: 1024px) {
+    .row{
+        border: 4px solid brown;
+        padding: 3em 0 3em 0;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (max-width: 950px) {
+
+    .container{
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .nav{
+        display: flex;
+        bottom: 0;
+        order: 1;
+        height: auto;
+        justify-content: space-between;
+        padding: 2em;
+    }
+
+    .menu{
+        margin: 0em 1em;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    .row{
+        border: 4px solid brown;
+        padding: 3em 0 3em 0;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 400px) {
+
+
+    .row{
+        border: 4px solid brown;
+        padding: 3em 0 3em 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .row.header{
+        text-align: center;
+        padding: 2em;
+        font-size: 0.8rem;
+    }
+    
+    .motto p{
+        margin: 1em;
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .review-content{
+        max-width: 290px;
+    }
+
+    .review__name, .review__body{
+        font-size: 1em;
+    }
+}
