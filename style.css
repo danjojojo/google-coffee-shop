@@ -281,6 +281,12 @@
         font-size: 1.3rem;
     }
 
+    .row.header{
+        text-align: center;
+        padding: 2em;
+        font-size: 1.3rem;
+    }
+
     .menu{
         margin: 0em 1em;
         text-align: center;
