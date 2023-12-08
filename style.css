@@ -5,9 +5,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Product Sans';
+    font-family: 'Product Sans', sans-serif;
 }
-
 
 /* ========================= CONTAINER DIV ========================= */
 .container{
@@ -25,7 +24,27 @@
 .menu{
     margin-top: 2em;
     text-align: center;
-    font-weight: 500;
+    font-weight: 500; 
+    cursor: pointer;   
+}
+
+.menu p{
+    font-size: 0.9rem;
+    margin-top: 2%;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #444444;
+}
+
+.nav span{
+    padding: 2% 16%;
+}
+
+.nav span:hover{
+    background-color: #d1d1d1;
+    border-radius: 15px;
 }
 
 .menu:first-child{
@@ -51,9 +70,26 @@
     font-size: 100%;
 }
 
+.google_logo{
+    display: flex;
+    align-items: center;
+}
+
+.google_logo img{
+    width: 10%;
+    margin-right: 5%;
+    cursor: pointer;
+}
+
 #desktop .material-symbols-outlined{
     margin-left: 1em;
     font-size: 2.5rem;
+    cursor: pointer;
+}
+
+#desktop .material-symbols-outlined:hover{
+    background-color: #d1d1d1;
+    border-radius: 50px;
 }
 
 .row.header span, .about-us span{
@@ -86,16 +122,14 @@
     display: flex;
     flex-direction: row;
     text-align: left;
-    padding: 1%;
-    border: 1px solid black;
+    padding: 0%;
 }
 
 .about-us{
     margin: 2em;
-    padding: 1%;
+    padding: 2%;
     width: 60%;
     font-size: 1.1em;
-    border: 1px solid black;
 }
 
 .about-us h3{
@@ -114,30 +148,48 @@
     display: flex;
     list-style: none;
     padding: 1em;
-    border: 1px solid black;
+    border-bottom: 1px solid #6a6a6a;
+    cursor: pointer;
     
 }
 
 .contacts li p{
     margin-left: 1em;
+    align-items: center;
 }
 
+.me{
+    text-align: center;
+    margin-bottom: 5%;
+}
 
 .sub-header{
     text-align: center;
-    font-weight: 700;
-    font-size: 2rem;
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: #444444;
+}
+
+.description{
+    margin-top: 1%;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 100;
+    color: #444444;
 }
 
 
 /* ========================= MOTTO DIV ========================= */
 .motto{
-    border: 4px solid rgb(162, 162, 162);
-    background-color: rgb(162, 162, 162);
     border-radius: 25px;
-    padding-top: 15%;
-    margin-bottom: 3rem;
+    padding:15% 0 3%;
+    margin-bottom: 5%;
     justify-content: center;
+    background-image: url(images/motto.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
 }
 
 .motto p{
@@ -145,25 +197,98 @@
     font-size: 270%;
     text-align: left;
     font-weight: 300;
-    color: white;
+    color: rgb(102, 81, 62)
 }
 
 
 /* ========================= BEST-SELLERS DIV ========================= */
 .best-sellers{
     display: flex;
-    margin-top: 1.5rem;
-    padding: 0 5rem;
+    flex-direction: row;
+    margin-top: 5%;
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 3rem;
 }
 
 .product{
-    border: 4px solid darkblue;
-    padding: 10rem;
-    margin: 1rem;
+    display: flex;
+    border-radius: 20px;
+    border: 1px solid #b9b9b9;
+    padding: 2%;
+    margin: .5%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: fit-content;
+    max-height: 500px;
+    background-color: white;
 }
+
+.product img{
+    width: auto;
+    max-width: 35%;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+
+.about_product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product_name{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.product_details{
+    padding: 5% 12%;
+   
+}
+
+.sizes{
+    display: flex;
+    justify-content: space-between;
+    padding:5%;
+    margin:0 15%;
+    align-items: center;
+}
+
+.small, .large{
+    padding:2% 4%;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.sizes span{
+    font-size: 1.3rem;
+}
+
+.add-to-order{
+    padding: 2% 5%;
+    border: 1.4px solid rgb(87, 154, 255);
+    color: rgb(87, 154, 255);
+    max-width: 40%;
+    margin: 0 auto;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.small:hover, .large:hover{
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+.add-to-order:hover{
+    background-color: rgb(226, 238, 255);
+}
+
+
+
+
 
 
 /* ========================= REVIEW-BODY DIV ========================= */
@@ -194,10 +319,15 @@
     top: 45%;
     background: white;
     border: 1px solid #6a6a6a;
-    border-radius: 50%;
     cursor: pointer;
+    border-radius: 50%;
+    padding: .5em;
     color: grey;
     z-index: 99;
+}
+
+.arrow:hover{
+    background-color: #e8e8e8;
 }
 
 .arrow svg{
@@ -225,36 +355,75 @@
     display: grid;
     place-items: center;
     gap: 1.5rem;
-   
+}
+
+.review__name{
+    font-weight: 700;
 }
 
 .review__profile{
-    border: 1px solid black;
-    padding: 0.8rem 1.3rem 0.8rem 1.3rem;
-    border-radius: 50%;
-    font-weight: 600;
+    margin: 20%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    
+}
+
+.profile-pic{
+    border-radius: 50%; 
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif
+    /* background-color: rgb(74, 106, 162); */
+}
+
+.review__body{
+    color: #6a6a6a;
+    font-size: 1.2rem;
 }
 
 
 
 /* ========================= WINDOW SIZE ========================= */
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media (max-width: 1440px) {
+
+@media (width >=  1440px) {
     .row{
         padding: 3em 0 3em 0;
         margin-left: 5%;
         margin-right: 5%;
     }
+
+    .sizes{
+        margin:0 20%;
+    }
+
+    .product img{
+        max-width: 30%;
+    }
+
+    .product_name{
+        font-size: 1.7rem;
+    }
+
+    .product_details,.sizes p,.small, .large, .add-to-order{
+        font-size: 1.2rem;
+    }
 }
 
+
+
 /* Large devices (laptops/desktops, 992px and up) */
-@media (max-width: 1024px) {
+@media (width <= 1024px) {
     .row{
         padding: 3em 0 3em 0;
         margin-left: 2%;
         margin-right: 2%;
     }
-
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -281,12 +450,6 @@
         font-size: 1.3rem;
     }
 
-    .row.header{
-        text-align: center;
-        padding: 2em;
-        font-size: 1.3rem;
-    }
-
     .menu{
         margin: 0em 1em;
         text-align: center;
@@ -299,13 +462,7 @@
     }
 
     .review-content{
-        font-size: 1rem;
-    }
-
-    .product{
-        border: 4px solid darkblue;
-        padding: 8rem;
-        margin: 2rem;
+        font-size: 1.01rem;
     }
     
     .row.footer{
@@ -336,39 +493,87 @@
     }
 
     .product{
-        border: 4px solid darkblue;
-        padding: 40%;
+        
+        padding: 2%;
         margin: 0.5rem;
+    }
+
+    .sub-header{
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.7rem;
+        margin: 3%;
+        padding: 5%;
+    }
+
+    .motto{
+        margin: 2%;
+    }
+
+    .motto p{
+        font-size: 200%;
+    }
+
+    .description{
+        margin: 0 5%;
+    }
+
+    .profile-pic{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (width <= 650px){
+    .sizes{
+        margin:0 10%;
+    }
+
+    .product_name{
+        font-size: 1.2rem;
+    }
+
+    .product_details,.sizes p,.small, .large, .add-to-order{
+        font-size: .9rem;
+    }
+
+    .profile-pic{
+        width: 25px;
+        height: 25px;
     }
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media (max-width: 415px) {
+@media (max-width: 430px) {
     #desktop{
         display: none;
     }
 
     #mobile{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        border: 1px solid black;
+        padding: 8%;
     }
 
-    #mobile h1{
-        font-size: 150%;
+    #mobile .google_logo img{
+        width: 30%;
+        margin-right: 5%;
+    }
+
+    
+    #mobile .material-symbols-outlined:nth-child(2){
+        margin-left: 5%;
     }
 
     .icons {
         display: flex;
-        border: 1px solid black;
         align-items: center;
-        gap: 5rem;
+        justify-content: space-between;
     }
 
-    .icons.material-symbols-outlined{
-        font-size: 150%;
-        
+    .icons .material-symbols-outlined{
+        font-size: 2.5rem;
     }
 
     .container{
@@ -397,11 +602,6 @@
         padding: 5% 0%;
         font-size: 1rem;
     }
-
-    .motto{
-        margin: .5em;
-        margin-bottom: 3em;
-    }
     
     .motto p{
         margin: 1em;
@@ -409,9 +609,14 @@
         text-align: left;
     }
 
+    .profile-pic{
+        width: 30px;
+        height: 30px;
+    }
+
     .review-content{
         max-width: 300px;
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .review__name, .review__body{
@@ -420,12 +625,8 @@
 
     .sub-header{
         text-align: center;
-        font-weight: 700;
+        font-weight: 500;
         font-size: 1.6rem;
-    }
-
-    .product{
-        border: 4px solid darkblue;
     }
 
     .row.footer{
@@ -436,19 +637,89 @@
     .about-us{
         margin: 0;
         width: 100%;
-
         justify-content: center;
         font-size: .8em;
     }
 
     .contacts{
         width: 100%;
-        font-size: .8rem;
+        font-size: .9rem;
+    }
+
+    .profile-pic{
+       scale: .7;
+    }
+
+    .best-sellers{
+        display: flex;
+        flex-direction: row;
+        margin-top: 5%;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+        padding: 0;
+    }
+
+    .product{
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 0.1%;
+        margin: .5%;
+        justify-content: center;
+        max-width: 300px;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    .product img{
+        margin-top: 5%;
+        max-width: 70%;
+    }
+
+    .add-to-order{
+        margin-bottom: 9%;
+    }
+
+    .description{
+        font-size: 1rem;
     }
 }
 
-@media (max-width: 300px){
+@media (width <= 389px){
+    #mobile h1{
+        font-size: 2rem;
+        width: fit-content;
+        padding:0 2em;
+    }
+
+    .sub-header{
+        font-size: 1.5rem;
+    }
+
+    
+}
+
+@media (width <= 320px){
+    #mobile h1{
+        font-size: 1rem;
+        width: fit-content;
+        padding:0 1em;
+    }
+}
+
+@media (width <= 300px){
     #mobile .material-symbols-outlined{
         display: none;
+    }
+    
+    #mobile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5%;
+    }
+
+    #mobile .google_logo img{
+        margin: 0 auto;
     }
 }

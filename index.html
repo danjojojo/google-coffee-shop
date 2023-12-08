@@ -3,43 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Google Brews</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <script defer src="review.js"></script>
+    <script defer src="bestsellers.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="nav">    
             <div class="menu">
-                <span class="material-symbols-outlined active">home</span>
-                <p>Home</p>
+                <a href="index.html">
+                    <span class="material-symbols-outlined active">home</span>
+                    <p>Home</p>
+                </a>
             </div>
             <div class="menu">
-                <span class="material-symbols-outlined active">coffee</span>
-                <p>Products</p>
+                <a href="index.html">
+                    <span class="material-symbols-outlined active">coffee</span>
+                    <p>Products</p>
+                </a>
             </div>
             <div class="menu">
-                <span class="material-symbols-outlined active">music_note</span>
-                <p>Music</p>
+                <a href="index.html">
+                    <span class="material-symbols-outlined active">music_note</span>
+                    <p>Music</p>
+                </a>
             </div>
             <div class="menu">
-                <span class="material-symbols-outlined active">work</span>
-                <p>Job</p>
+                <a href="index.html">
+                    <span class="material-symbols-outlined active">work</span>
+                    <p>Job</p>
+                </a>
             </div>
         </div>
         <div class="content">
             <div class="row header" id="desktop">
-                <h1 class="google">Google <span>Brews</span></h1>
+                <div class="google_logo">
+                    <img src="images/logo.png" alt="Logo">
+                    <h1 class="google">Google <span>Brews</span></h1>
+                </div>
                 <div class="icons">
                     <span class="material-symbols-outlined">dark_mode</span>
                     <span class="material-symbols-outlined">account_circle</span>
                 </div>
             </div>
             <div class="row header" id="mobile">
+                <div class="google_logo">
+                    <img src="images/logo.png" alt="Logo">
+                </div>
                 <div class="icons">
                     <span class="material-symbols-outlined">dark_mode</span>
-                    <h1 class="google">G <span>Brews</span></h1>
                     <span class="material-symbols-outlined">account_circle</span>
                 </div>
             </div>
@@ -48,10 +63,47 @@
                     <p>Brewing memories<br>in every cup of coffee.</p>
                 </div>
                 <p class="sub-header">Best Sellers</p>
+                <p class="description">These coffee blends have become fan favorites among our awesome customers! </p>
+                
                 <div class="best-sellers">
-                    <div class="product">Product</div>
-                    <div class="product">Product</div>
-                    <div class="product">Product</div>
+                    <div class="product">
+                        <img src="best seller/cappuccino.png" alt="cappuccino">
+                        <div class="about_product">
+                            <p class="product_name">Cappuccino</p>
+                            <p class="product_details">A double shot of Arabica bean espresso with steamed milk, creating the perfect frothy texture. Totally delicious and topped with a chocolatey dusting.</p>
+                            <div class="sizes">
+                                <p>Available in:</p>
+                                <div class="small">
+                                    <span class="material-symbols-outlined">local_cafe</span>
+                                    <p>Small</p>
+                                </div>
+                                <div class="large">
+                                    <span class="material-symbols-outlined">local_drink</span>
+                                    <p>Large</p>
+                                </div>
+                            </div>
+                        <p class="add-to-order">Add to order</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="best seller/long black.png" alt="Long Black">
+                        <div class="about_product">
+                            <p class="product_name">Long Black</p>
+                            <p class="product_details">Start your mornings with a bold Google Brews' Long Black coffee, a double shot of rich espresso with hot water.</p>
+                            <div class="sizes">
+                                <p>Available in:</p>
+                                <div class="small">
+                                    <span class="material-symbols-outlined">local_cafe</span>
+                                    <p>Small</p>
+                                </div>
+                                <div class="large">
+                                    <span class="material-symbols-outlined">local_drink</span>
+                                    <p>Large</p>
+                                </div>
+                            </div>
+                        <p class="add-to-order">Add to order</p>
+                        </div>
+                    </div>
                 </div>
                 <p class="sub-header">What our customers say about our coffee</p>
                 <div class="review-body">
@@ -72,9 +124,7 @@
             <div class="row footer">
                 <div class="about-us">
                     <h3>Google <span>Brews</span></h3>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit vitae veritatis voluptas, ipsa iste et aut commodi modi deserunt atque possimus repellat neque tempore velit libero. Quos ex possimus nesciunt!    
-                    </p>
+                    <p>Welcome to our coffee haven, brought to you by Google. We're here to elevate your daily coffee experience with simple perfection. In our cozy space, discover the joy in each sip and the warmth of a welcoming atmosphere. Welcome to a new chapter in coffee enjoyment.</p>
                 </div>
                 <div class="contacts">
                     <ul>
@@ -92,6 +142,9 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div class="me">
+                <p>Daniel Molina</p>
             </div>
         </div>
     </div>

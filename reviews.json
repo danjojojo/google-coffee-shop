@@ -1,32 +1,38 @@
 [
   {
     "id": 1,
-    "username": "Elise Gardner",
-    "body": "alaudantium enim quasi est quidem magnam voluptate ipsam eos tempora quo necessitatibus dolor quam autem quasi reiciendis et nam sapiente accusantium"
+    "headshotcolor": "#23959C",
+    "username": "elise gardner",
+    "body": "Their bold and flavorful Long Black makes it the perfect kickstart-er to my every day."
   },
   {
     "id": 2,
+    "headshotcolor": "#23459C",
     "username": "Janye Kuhic",
-    "body": "est natus enim nihil est dolore omnis voluptatem numquam et omnis occaecati quod ullam at voluptatem error expedita pariatur nihil sint nostrum voluptatem reiciendis et"
+    "body": "Cappuccino def the one. This coffee spot has mastered the art of crafting the perfect cappuccino. Love it!"
   },
   {
     "id": 3,
-    "username": "Nikitar Smone",
-    "body": "quia molestiae reprehenderit quasi aspernatur aut expedita occaecati aliquam eveniet laudantium omnis quibusdam delectus saepe quia accusamus maiores nam est cum et ducimus et vero voluptates excepturi deleniti ratione"
+    "headshotcolor": "#8B239C",
+    "username": "nikitarsmone2015",
+    "body": "If you appreciate a strong and flavorful brew, you need to check out Google Brews. The Long Black here is simply perfection 😍 "
   },
   {
     "id": 4,
+    "headshotcolor": "#9C234F",
     "username": "Lew Davis",
-    "body": "non et atque occaecati deserunt quas accusantium unde odit nobis qui voluptatem quia voluptas consequuntur itaque dolor et qui rerum deleniti ut occaecati"
+    "body": "The chill vibes here perfectly complement the refreshing iced coffee they serve. Highly recommend for fellow iced coffee enthusiasts"
   },
   {
     "id": 5,
+    "headshotcolor": "#9C5623",
     "username": "Hayden Wright",
-    "body": "harum non quasi et ratione tempore iure ex voluptates in ratione harum architecto fugit inventore cupiditate voluptates magni quo et"
+    "body": "This coffee shop has won me over with their Cappuccinos. The frothiness is on point, and the flavor is unmatched."
   },
   {
     "id": 6,
+    "headshotcolor": "#239C5B",
     "username": "Presley Mueller",
-    "body": "doloribus at sed quis culpa deserunt consectetur qui praesentium accusamus fugiat dicta voluptatem rerum ut voluptate autem voluptatem repellendus aspernatur dolorem in"
+    "body": "Coffee cravings sorted! ☕️ The Long Black is my absolute favorite – strong and aromatic. And the Cappuccino? Perfection in a cup. "
   }
 ]
