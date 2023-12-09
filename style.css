@@ -154,9 +154,18 @@
     
 }
 
+.contacts li:hover{
+    background-color: #f6f6f6;    
+}
+
 .contacts li p{
     margin-left: 1em;
     align-items: center;
+}
+
+.contacts li a{
+    text-decoration: none;
+    color: #393939;
 }
 
 .me{
